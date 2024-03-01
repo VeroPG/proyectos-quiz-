@@ -1,0 +1,218 @@
+/* Estilos generales */
+* {
+  scroll-behavior: smooth;
+  font-size: 1em;
+  /* border: 1px solid rgba(255, 0, 225, 0.738); */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  width: 100%;
+  padding: auto;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  background-color: #7f5ad49a;
+  overflow: auto;
+  flex-direction: row;
+}
+
+/* Estilos para preguntas */
+article {
+  width: 95%;
+  height: 90%;
+  margin-bottom: 20px;
+}
+
+.answers-div div {
+  height: 90%;
+  padding: 10%;
+  background-color: lightblue;
+  border: 2px solid #fff;
+  align-content: center;
+}
+
+.answers-div div:hover {
+  margin: 5px;
+  background-color: rgb(30, 170, 216);
+  border: 2px solid #ffffff9c;
+}
+
+label {
+  font-family: poppins;
+  font-size: 1.15rem;
+  padding-top: 5%;
+  margin-bottom: 5px;
+}
+
+input {
+  height: 30%;
+}
+
+input[type="radio"] {
+  text-align: justify;
+  background-color: #4da4d394;
+  padding: 5% 10%;
+  font: inherit;
+  color: currentColor;
+  width: 1em;
+  height: 1em;
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Estilos para botones */
+#submitBtn {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #691aaf;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submitBtn:hover {
+  background-color: #a762ce;
+}
+
+#mensajePuntuacion {
+  text-align: center;
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #691aaf;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+/* Media query para tablet */
+@media only screen and (min-width: 768px) {
+  section {
+    padding-top: 3%;
+  }
+  .answers-div {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .answers-div > div {
+    width: 25%;
+    background-color: lightblue;
+    border: 2px solid #fff;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  label {
+    font-family: poppins;
+    font-size: 2rem;
+    margin-bottom: 2%;
+  }
+  input[type="radio"] {
+    background-color: #4da4d394;
+    font-size: 1.2rem;
+    color: currentColor;
+    width: 1em;
+    height: 1em;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  #submitBtn {
+    padding: 20px 0;
+    font-size: 1.5rem;
+  }
+  #mensajePuntuacion {
+    padding: 20px 0;
+    font-size: 1.5rem;
+  }
+
+  /* Media query para escritorio */
+  @media only screen and (min-width: 1200px) {
+    section {
+      padding-top: 3%;
+    }
+    .answers-div {
+      display: flex;
+      align-content: center;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .answers-div > div {
+      height: 2rem;
+      background-color: lightblue;
+      border: 2px solid #fff;
+      align-content: center;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+    }
+    label {
+      font-family: poppins;
+      font-size: 2.3rem;
+      padding-bottom: 20px;
+    }
+    input[type="radio"] {
+      background-color: #4da4d394;
+      font-size: 1.2rem;
+      color: currentColor;
+      width: 1em;
+      height: 1em;
+      border: 0.15em solid currentColor;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    input {
+      font-size: 1.5rem;
+    }
+    #submitBtn {
+      padding: 20px 0;
+      font-size: 1.5rem;
+    }
+    #mensajePuntuacion {
+      padding: 20px 0;
+      font-size: 1.5rem;
+    }
+  }
+}
+/* estilos para pagina de intro */
+h1 {
+  font-size: 2rem;
+  font-family: poppins;
+}
+
+.intro_background {
+  background-image: url(/wallpaperbetter.com_1024x768.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#texto_Monty {
+  height: 100vh;
+}
