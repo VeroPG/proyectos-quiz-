@@ -7,7 +7,7 @@ const data = [
     choice2: "la Inquisición española",
     choice3: "lo inesperado",
     choice4: "Loro muerto",
-    correct: "la Inquisición española",
+    correct: "la Inquisición española",//ok
   },
   {
     question:
@@ -15,13 +15,13 @@ const data = [
     choice1: "Terry Jones",
     choice2: "Erice Idle",
     choice3: "John Cleese",
-    choice4: "Terry Gilliam",
+    choice4: "Terry Gilliam",//ok
     correct: "Terry Gilliam",
   },
   {
     question:
       "¿Quién creó HandMade Films para garantizar que se hiciera Life Of Brian de Monty Python?",
-    choice1: "George Harrison", //
+    choice1: "George Harrison", //ok
     choice2: "John Lennon",
     choice3: "Paul McCartney",
     choice4: "Ringo Starr",
@@ -34,7 +34,7 @@ const data = [
     choice2: "La vida de Brian",
     choice3: "Los caballeros de la mesa cuadrada",
     choice4: "Se armó la gorda",
-    correct: "Los caballeros de la mesa cuadrada",
+    correct: "Los caballeros de la mesa cuadrada",//ok
   },
   {
     question: "¿A que velocidad vuela una golondrina?",
@@ -42,7 +42,7 @@ const data = [
     choice2: "4 m/s",
     choice3: "10 km/s",
     choice4: "Africana o Europea?",
-    correct: "Africana o Europea?",
+    correct: "Africana o Europea?",//ok
   },
   {
     question:
@@ -51,14 +51,14 @@ const data = [
     choice2: "El caballero negro",
     choice3: "El Rey Arturo",
     choice4: "Sir Robin",
-    correct: "El caballero negro",
+    correct: "El caballero negro",//ok
   },
   {
     question:
       "¿Como se llamaba el musical de Broadway basado en la película Los caballeros de la mesa cuadrada?",
     choice1: "Ham-a-lot",
     choice2: "Holy Grail: El Musical",
-    choice3: "Spamalot",
+    choice3: "Spamalot",// ok
     choice4: "Spam n Ham",
     correct: "Spamalot",
   },
@@ -120,26 +120,26 @@ document
     event.preventDefault(); // Evitar el comportamiento predeterminado del botón de envío
 
     const puntuacionRadio = validarRespuestasRadio();
-    mostrarPuntuacion(puntuacionRadio);
+    mostrarPuntuacion(puntuacionRadio);// llama a la funcion que muestra mensaje de puntuacion y recupera el return, muestra puntuacion
   });
 
-function mostrarPuntuacion(puntuacion) {
+function mostrarPuntuacion(puntuacion) { // recoge como argumento el return de la funcion validarRespuestasRadio() y muestra mensaje
   const mensaje = document.getElementById("mensajePuntuacion");
-  mensaje.innerHTML = "Puntuación con radio inputs: " + puntuacion;
+  mensaje.innerHTML = "Puntuación: " + puntuacion;
 }
 
 function validarRespuestasRadio() {
-  let puntuacion = 0;
-  const preguntas = document.querySelectorAll(".answers-div");
+  let puntuacion = 0;  // iniciamos variable acumular puntuacion
+  const preguntas = document.querySelectorAll(".answers-div"); // s todos los elementos de clase, que contienen las respuestas
   let acertadasArray = [];
   let erroneasArray = [];
 
-  preguntas.forEach(function (pregunta, index) {
-    const respuestaUsuario = pregunta.querySelector(
+  preguntas.forEach(function (pregunta, index) {// recorremos todos los elementos obtenidos en el paso anterior
+    const respuestaUsuario = pregunta.querySelector( //almacenamos todos los elementos que tengan el input checked
       'input[type="radio"]:checked'
     );
     if (respuestaUsuario) {
-      if (respuestaUsuario.value === data[index].correct) {
+      if (respuestaUsuario.value === data[index].correct) { //comparamos valores
         puntuacion++;
         acertadasArray.push(pregunta);
       } else {
